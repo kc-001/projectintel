@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Management Tools for ECs | MY PROJECT INTEL</title>
+	<link href="images/Favicon_E.ico" rel="shortcut icon" >
+  <link href="styles/style.css" rel="stylesheet">
+  <link href="schedule/style.css" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Overpass&family=Raleway:ital,wght@0,500;1,500&family=Roboto+Condensed:wght@700&display=swap" rel="stylesheet">
+  <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+  <script type="text/javascript">
+    google.charts.load('current', {'packages':['gantt']});
+    google.charts.setOnLoadCallback(drawChart);
+    function daysToMilliseconds(days) {
+      return days * 24 * 60 * 60 * 1000;
+    }
+    function drawChart() {
+
+      var data = new google.visualization.DataTable();
+      data.addColumn('string', 'Task ID');
+      data.addColumn('string', 'Task Name');
+      data.addColumn('date', 'Start Date');
+      data.addColumn('date', 'End Date');
+      data.addColumn('number', 'Duration');
+      data.addColumn('number', 'Percent Complete');
+      data.addColumn('string', 'Dependencies');
+
+      data.addRows([
+        ['001', 'Typical Section Package', new Date(2015, 0, 1), new Date(2015, 0, 5), null,  60,  null],
+        ['002', 'Line and Grade Plans', new Date(2015, 0, 5), new Date(2015, 0, 10), daysToMilliseconds(1), 20, '001'],
+        ['003', 'Pavement Design Package',new Date(2015, 0, 5), new Date(2015, 0, 10), daysToMilliseconds(1), 75, '001'],
+        ['004', 'Submittal',new Date(2015, 0, 10), new Date(2015, 0, 15), daysToMilliseconds(1), 0, '002,003']
+        ]);
+
+      var options = {
+        height: 275
+      };
+
+      var chart = new google.visualization.Gantt(document.getElementById('chart_div'));
+
+      chart.draw(data, options);
+    }
+  </script>
+</head>
+<body>
+  <h1><a href="index.html">PROJECT INTEL</a></h1>
+  <aside>
+    <div class="navbar">
+      <a href="scope.html">Scope</a>
+      <a class="active" href="schedule.html">Schedule</a>
+      <a href="budget.html">Budget</a>
+      <a href='report.html'>Reports</a>
+      <div class="login"><!--https://www.w3schools.com/howto/howto_css_login_form_navbar.asp-->
+        <!-- <form action="/action_page.php">
+          <input type="text" placeholder="Username" name="username">
+          <input type="text" placeholder="Password" name="psw">
+          <button type="submit">Login</button>
+        </form> -->
+      </div>
+    </div>
+  </aside>
+  <section>
+    <div id="myDIV" class="header">
+      <h2>Schedule of Deliverables</h2>
+      <!-- <input type="text" id="myInput" placeholder="Serach for item here...">
+      <span onclick="newElement()" class="addBtn">Search</span> -->
+    </div>
+    <div id="chart_div"></div>
+  </section>
+  <article>
+  </article>
+  <footer>
+  </footer>
+</body>
+</html> 

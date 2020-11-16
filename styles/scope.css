@@ -1,0 +1,48 @@
+section{
+	display: grid;
+	grid:".... position1 position2  position3 ...." auto/
+		1fr minmax(300px, 500px) minmax(300px, 500px) minmax(300px, 500px) 1fr;
+}
+
+section h2{
+	font-family: "Overpass", sans-serif;
+	font-size:30px;
+	text-align: left;
+	margin:0;
+	padding: 20px 0;
+}
+
+section li:hover{
+	opacity: 0.5;
+	cursor: pointer;
+}
+
+.segmentList{
+	grid-area: position1;
+	line-height: 1.5;
+}
+
+.subSegmentList{
+	grid-area: position2;
+	line-height: 1.5;
+}
+.taskList{
+	grid-area: position3;
+	line-height: 1.5;
+}
+
+.taskBody{
+	margin-top: 20px;
+	margin-bottom: 10px;
+}
+
+[type="checkbox"]:checked + label{
+	opacity: 0.5;
+	text-decoration: line-through;
+}
+
+.active{
+	font-weight: bolder;
+	text-decoration: underline;
+	text-underline-offset: 25%;
+}

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Management Tools for Engineering Consultants | MY PROJECT INTEL</title>
+	<link href="images/Favicon_E.ico" rel="shortcut icon" >
+	<link href="styles/style.css" rel="stylesheet">
+	<link href="styles/scope2.css" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Overpass&family=Raleway:ital,wght@0,500;1,500&family=Roboto+Condensed:wght@700&display=swap" rel="stylesheet">
+</head>
+<body>
+	<h1><a href="index.html">PROJECT INTEL</a></h1>
+	<aside>
+		<div class="navbar">
+			<a class="active" href="scope.html">Scope</a>
+			<a href="schedule.html">Schedule</a>
+			<a href="budget.html">Budget</a>
+			<a href='report.html'>Reports</a>
+			<div class="login"><!--https://www.w3schools.com/howto/howto_css_login_form_navbar.asp-->
+				<form action="/action_page.php">
+					<input type="text" placeholder="Username(Email)" name="username">
+					<input type="text" placeholder="Password" name="psw">
+					<button type="submit">Login</button>
+				</form>
+			</div>
+		</div>
+	</aside>
+	<section>
+		<div id="myDIV" class="header">
+			<h2>List of Deliverables</h2>
+			<input type="text" id="myInput" placeholder="Enter deliverable item here...">
+			<span onclick="newElement()" class="addBtn">Add</span>
+		</div>
+		<!--
+		<ul id="myUL">
+			<li>Kickoff</li>
+			<li>Utility Contact Plans</li>
+			<li>Initial Engineering</li>
+			<li>Constructability Review</li>
+			<li>Biddability Review</li>
+			<li>Production</li>
+		</ul>
+	-->
+	<dl id = "myDL">
+		<dt>Kickoff</dt>
+			<dd>Agenda</dd>
+			<dd>Plan View</dd>
+		<dt>Utility Contact Plans</dt>
+			<dd>Plans</dd>
+			<dd>Letters</dd>
+		<dt>Initial Engineering Plans</dt>
+			<dd>Geometry</dd>
+			<dd>Cross Sections</dd>
+			<dd>CAP</dd>
+			<dd>Typical Sections</dd>
+		<dt>Constructabilty Review</dt>
+			<dd>QC</dd>
+		<dt>Biddability Review</dt>
+			<dd>Quantities</dd>
+		<dt>Production</dt>
+			<dd>Final Review</dd>
+			<dd>Sign and Seal</dd>
+	</dl>
+</section>
+<article>
+</article>
+<footer>
+</footer>
+<script src="scripts/scope2.js"></script>
+</body>
+</html> 

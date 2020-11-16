@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Management Tools for ECs | MY PROJECT INTEL</title>
+	<link href="images/Favicon_E.ico" rel="shortcut icon" >
+	<link href="styles/style.css" rel="stylesheet">
+	<link href="styles/scope.css" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Overpass&family=Raleway:ital,wght@0,500;1,500&family=Roboto+Condensed:wght@700&display=swap" rel="stylesheet">
+	<!-- <script defer src="scripts/scope.js"></script> -->
+</head>
+<body>
+	<h1><a href="index.html">PROJECT INTEL</a></h1>
+	<aside>
+		<div class="navbar">
+			<a class="active" href="scope.html">Scope</a>
+			<a href="schedule.html">Schedule</a>
+			<a href="budget.html">Budget</a>
+			<a href='report.html'>Reports</a>
+		</div>
+	</aside>
+	<section>
+		<div class="segmentList"><!--SEGMENT ORDER CONTROL -->
+			<h2>Segment</h2>
+			<form action="" data-new-segment-form>
+				<input
+				type="text"
+				class="new segment"
+				data-new-segment-input
+				placeholder="new segment name"
+				title="new segment name"
+				/>
+				<button class="btn list"
+				title="Create">+</button>
+				<button class="btn up"
+				title="Move Up">&#8593;</button>
+				<button class="btn down"
+				title="Move Down">&#8595;</button>
+			</form>
+			<ul class="segment-ul" segment-data>
+			<li class="segment-li active"><span class = "segmentNum">001-</span>Initial Engineering</li>
+			<li class="segment-li"><span class = "segmentNum">002-</span>Constructability Review</li>
+			<li class="segment-li"><span class = "segmentNum">003-</span>Biddability Review</li>
+			<li class="segment-li"><span class = "segmentNum">004-</span>Production Submittal</li>
+		</ul>
+		<div class="delete-segment"></div>
+		<button class="btn delete" title = "Delete" data-delete-segment-button>Delete Segment</button>
+	</div>
+	<div class="subSegmentList" data-subSegment-display-container><!--SUB SEGMENT ORDER CONTROL -->
+		<h2 data-subSegment-title>Sub Segment</h2>
+		<form action="" data-new-subSegment-form>
+			<input
+			type="text"
+			class="new subSegment"
+			data-new-subSegment-input
+			placeholder="new sub-segment name"
+			title="new sub-segment name"
+			/>
+			<button class="btn list"
+			title="create sub-segment">+</button>
+			<button class="btn up"
+			title="Move Up">&#8593;</button>
+			<button class="btn down"
+			title="Move Down">&#8595;</button>
+		</form>
+		
+		<ul class="subSegment-ul" subSegment-data>
+			<li class="subSegment-li active"><span class = "subSegmentNum">001-</span>Roadway</li>
+			<li class="subSegment-li"><span class = "subSegmentNum">002-</span>Drainage</li>
+			<li class="subSegment-li"><span class = "subSegmentNum">003-</span>Structures</li>
+			<li class="subSegment-li"><span class = "subSegmentNum">004-</span>ITS</li>
+			<li class="subSegment-li"><span class = "subSegmentNum">005-</span>Signalization</li>
+			<li class="subSegment-li"><span class = "subSegmentNum">006-</span>S&PM</li>
+			<li class="subSegment-li"><span class = "subSegmentNum">007-</span>Traffic Control</li>
+		</ul>
+		<div class="delete-subSegment"></div>
+		<button class="btn delete" data-delete-subSegment-button>Delete Sub-Segment</button>
+	</div>
+	<div class="taskList" data-task-display-container><!--TASK LIST CONTROL -->
+		<div class="taskHeader">
+			<h2 class>Task</h2>
+			<form action="">
+				<input
+				type="text"
+				class="new task"
+				placeholder="new task name"
+				title="new task name"
+				/>
+				<button class="btn list"
+				title="create new task">+</button>
+				<button class="btn up"
+				title="Move Up">&#8593;</button>
+				<button class="btn down"
+				title="Move Down">&#8595;</button>
+			</form>
+		</div>
+		<div class="taskBody">
+			<!-- /TASK1-->
+			<div class="tasks">
+				<div class="task">
+					<input type="checkbox" id="task-1"/>
+					<label for="task-1">
+						<span class = "custom-checkbox"></span>
+						<span class = "taskNum">001-</span>
+						Typical Section Package
+					</label>
+				</div>
+			</div>
+			<!-- /TASK1-->
+			<!-- /TASK2-->
+			<div class="tasks">
+				<div class="task">
+					<input type="checkbox" id="task-2"/>
+					<label for="task-2">
+						<span class = "custom-checkbox"></span>
+						<span class = "taskNum">002-</span>
+						Line and Grade Plans
+					</label>
+				</div>
+			</div>
+			<!-- /TASK2-->
+			<!-- /TASK3-->
+			<div class="tasks">
+				<div class="task">
+					<input type="checkbox" id="task-3"/>
+					<label for="task-3">
+						<span class = "custom-checkbox"></span>
+						<span class = "taskNum">003-</span>
+						Pavement Design Package
+					</label>
+				</div>
+			</div>
+			<!-- /TASK3-->
+			<!-- /TASK4-->
+			<div class="tasks">
+				<div class="task">
+					<input type="checkbox" id="task-4"/>
+					<label for="task-4">
+						<span class = "custom-checkbox"></span>
+						<span class = "taskNum">004-</span>
+						Submittal
+					</label>
+				</div>
+			</div>
+			<!-- /TASK4-->
+		</div>
+		<div class="create-task"></div>
+		<div class="delete-task"></div>
+		<button class="btn delete">Clear Completed</button>
+		<button class="btn delete" data-delete-task-button>Delete Task</button>
+	</div>
+</section>
+<article>
+</article>
+<footer>
+	<p></p>
+</footer>
+</body>
+</html> 
