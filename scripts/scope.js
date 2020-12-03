@@ -10,11 +10,6 @@ const newSubSegmentInput = document.querySelector('[data-new-subSegment-input]')
 const subSegmentTitle = document.querySelector('[data-subSegment-title]')
 const deleteSubSegmentButton = document.querySelector('[data-delete-subSegment-button]')
 
-// const taskContainer = document.querySelector('[]')
-// const newTaskForm = document.querySelector('[]')
-// const newTaskInput = document.querySelector('[]')
-
-
 const LOCAL_STORAGE_SEGMENT_KEY = 'segment.list'
 const LOCAL_STORAGE_SELECTED_SEGMENT_ID = 'segment.selectedSegmentID'
 let segment = JSON.parse(localStorage.getItem(LOCAL_STORAGE_SEGMENT_KEY)) || []
@@ -29,9 +24,8 @@ segmentContainer.addEventListener('click', e=>{
 
 subSegmentContainer.addEventListener('click', e=> {
 	if (e.target.tagName.toLowerCase() === 'li'){
-		const selectedSegment = segment.find(segmentlist => segment.id === selectedSegmentID)
+		const selectedSegment = segment.find(segmentlist => segmentlist.id === selectedSegmentID)
 		const selectedSubSegment = selectedSegment.subSegments.find(subSegment => subSegment.id === e.target.id)
-		selectedSubSegment = e.target.dataset.subSegmentId
 		save()
 	}
 })
@@ -69,20 +63,6 @@ newSubSegmentForm.addEventListener('submit', e=>{
 	saveAndRender()
 })
 
-var upLink = document.getElementsByClassName("btn up")
-var downLink = document.getElementsByClassName("btn down")
-
-// var upLink = document.getElementsByClassName("up");
-// var j;
-// for (j = 0; j < upLink.length; j++) {
-// 	upLink[j].onclick = function () {
-// 		var wrapper = this.parentNode;
-
-// 		if (wrapper.previousElementSibling)
-// 			wrapper.parentNode.insertBefore(wrapper, wrapper.previousElementSibling);
-// 	}
-// }
-
 function createSegment(name){
 	return{id: Date.now().toString(), name: name, subSegments: []}
 }
@@ -104,7 +84,6 @@ function save(){
 function render(){
 	clearElement(segmentContainer)
 	renderSegment()
-
 	const selectedSegment = segment.find(segmentlist => segmentlist.id === selectedSegmentID)
 	if (selectedSegmentID == null){
 		subSegmentDisplayContainer.style.display = 'none'
@@ -143,3 +122,4 @@ function clearElement(element){
 }
 render()
 
+console.log(segment)

@@ -1,0 +1,85 @@
+/*MARGIN CONTROL*/
+body{
+	margin: auto;
+	padding: 0px 80px 0px 80px;
+}
+/*MARGIN CONTROL*/
+/*FONT CONTROL*/
+h1{
+	font-family: "Roboto Condensed", sans-serif;
+	font-size:60px;
+	text-align: center;
+	margin:0;
+	padding: 20px 0;
+}
+
+p{
+	font-family: "Raleway", sans-serif;
+	font-size: 15px;
+	line-height: 150%;
+}
+
+section h2{
+	font-family: "Overpass", sans-serif;
+	font-size:30px;
+	text-align: left;
+	margin:0;
+	padding: 20px 0;
+}
+
+aside{
+	font-family: "Raleway", sans-serif;
+}
+
+/*FONT CONTROL*/
+/*MENU CONTROL-https://www.w3schools.com/howto/howto_css_topnav_equal_width.asp - https://www.w3schools.com/howto/howto_css_login_form_navbar.asp*/
+*{box-sizing: border-box;}
+
+.navbar{
+	width: 100%;
+	background-color: #bab9b9;
+	overflow: auto;
+}
+.navbar a{
+	float: left;
+	padding: 10px;
+	color: black;
+	text-decoration: none;
+	font-size: 17px;
+	width: 20%;
+	text-align: center;
+}
+
+.navbar a:hover{
+	background-color: #ccc;
+}
+.navbar a.active{
+	background-color: #515151;
+	color: white;
+	text-shadow: 2px 2px 2px black;
+}
+
+.navbar .login button{
+	padding: 5px;
+	margin-top: 5px;
+	cursor: pointer;
+}
+
+.navbar input[type=text]{
+	margin-left:5px;
+}
+
+@media screen and (max-width: 500px){
+	.navbar .login {
+		float: none;
+	}
+	.navbar a, .navbar input[type=text], .navbar .login{
+		float: none;
+		display: block;
+		text-align: left;
+		width: 100%;
+		margin: 0;
+		padding: 14px;
+	}
+}
+/*MENU CONTROL*/
